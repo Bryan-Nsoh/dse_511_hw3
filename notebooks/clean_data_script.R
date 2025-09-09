@@ -24,3 +24,13 @@ subset_df <- ads_data |>
     sv_precrash_speed_mph
   )
 
+# make the time columns
+subset_df <- subset_df %>% 
+  mutate(date = my(incident_date),
+         month = month(date), # make Month column
+         year = year(date), # make Year column
+         hour = hour(round_date(as.POSIXct(subset_df$incident_time_24_00, 
+                                           format="%H:%M:%S"), unit = "hour"))) |>
+  select(-c(incident_date, incident_time_24_00, date))
+
+
