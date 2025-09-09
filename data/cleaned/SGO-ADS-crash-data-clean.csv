@@ -1,0 +1,69 @@
+year,month,hour,reporting_entity,make,model,model_year,roadway_type,sv_pre_crash_movement,sv_precrash_speed_mph
+2025,6,8,Oxbotica,FORD,Transit,2024,Intersection,Proceeding Straight,11
+2025,7,13,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Making Left Turn,11
+2025,6,14,Waymo LLC,JAGUAR,I-PACE,2024,Parking Lot,Proceeding Straight,1
+2025,6,9,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Proceeding Straight,5
+2025,6,17,Hyundai Motor America,HYUNDAI,Ioniq 5,2024,Intersection,"Other, see Narrative",0
+2025,6,0,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,23
+2025,6,21,Waymo LLC,JAGUAR,I-PACE,2024,Street,Passing,4
+2025,6,18,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,15
+2025,6,11,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,15,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,13,Nuro,TOYOTA,Prius,2022,Street,Proceeding Straight,13
+2025,4,7,Waymo LLC,JAGUAR,I-PACE,2024,Parking Lot,Proceeding Straight,5
+2025,6,11,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,23,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,0,Waymo LLC,JAGUAR,I-PACE,2024,Parking Lot,Proceeding Straight,7
+2025,6,17,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,8
+2025,6,19,Waymo LLC,JAGUAR,I-PACE,2021,Street,Proceeding Straight,6
+2025,6,13,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,21
+2025,6,12,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,16,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,6,23,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,13,Waymo LLC,JAGUAR,I-PACE,2021,Intersection,Stopped,0
+2025,6,14,Waymo LLC,JAGUAR,I-PACE,2021,Street,Stopped,0
+2025,6,16,Waymo LLC,JAGUAR,I-PACE,2021,Street,Parked,0
+2025,6,23,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,39
+2025,6,17,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,1
+2025,6,7,Waymo LLC,JAGUAR,I-PACE,2021,Street,Proceeding Straight,9
+2025,6,17,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,2,Waymo LLC,JAGUAR,I-PACE,2024,Parking Lot,Proceeding Straight,2
+2025,6,0,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,6,22,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,9,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,22,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,15,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,19,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,22
+2025,6,21,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,6,17,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,17,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,5,Waymo LLC,JAGUAR,I-PACE,2021,Parking Lot,Backing,2
+2025,6,8,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,6,23,Waymo LLC,JAGUAR,I-PACE,2021,Intersection,Proceeding Straight,21
+2025,6,23,"Zoox, Inc.",TOYOTA,Highlander,2019,Street,Proceeding Straight,9
+2025,6,8,"Beep, Inc.",FORD,Transit,2024,Intersection,Proceeding Straight,20
+2025,6,17,Motional,HYUNDAI,Ioniq 5,2024,Intersection,"Other, see Narrative",0
+2025,7,8,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,7,23,Waymo LLC,JAGUAR,I-PACE,2024,Street,Parked,0
+2025,7,15,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,7,22,Waymo LLC,JAGUAR,I-PACE,2021,Intersection,Stopped,0
+2025,7,18,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,1
+2025,7,16,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,10,Avride Inc.,HYUNDAI,Ioniq 5,2023,Intersection,Stopped,0
+2025,6,18,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,11,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,19,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Making Left Turn,10
+2025,6,19,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,6,23,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,6,0,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Proceeding Straight,8
+2025,6,18,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,6
+2025,6,19,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Parked,0
+2025,6,14,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,6,Waymo LLC,JAGUAR,I-PACE,2021,Parking Lot,Stopped,0
+2025,6,3,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Stopped,0
+2025,6,9,Waymo LLC,JAGUAR,I-PACE,2024,Parking Lot,Proceeding Straight,10
+2025,6,22,Waymo LLC,JAGUAR,I-PACE,2024,Intersection,Parked,0
+2025,6,9,Waymo LLC,JAGUAR,I-PACE,2024,Street,Stopped,0
+2025,6,8,Waymo LLC,JAGUAR,I-PACE,2024,Parking Lot,Proceeding Straight,10
+2025,6,15,"Zoox, Inc.",TOYOTA,Highlander,2019,Street,Stopped,0
+2025,6,13,Waymo LLC,JAGUAR,I-PACE,2024,Street,Proceeding Straight,31
