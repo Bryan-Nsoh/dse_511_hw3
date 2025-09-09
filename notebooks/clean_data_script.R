@@ -35,3 +35,5 @@ subset_df <- subset_df %>%
   relocate(year, month, hour, .before = reporting_entity) # move year, month, and hour to be the first columns in the df
 
 
+# write subset to CSV
+write_csv(subset_df, "./data/cleaned/SGO-ADS-crash-data-clean.csv")
