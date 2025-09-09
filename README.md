@@ -3,12 +3,14 @@
 Minimal scaffolding for the assignment. Fill in dataset choice, cleaning steps, and EDA later.
 
 ## Dataset
-- Source:
+- **Source:**
+  
   National Highway Transporation Safety Asssociation's Standing General Order on Crash Reporting for Advanced Driving Systems (ADS) as of August 2025,
   Obtained September 2025,
   https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting#data
 
-- Description:
+- **Description:**
+  
   Self-reported crashes from car companies were physical damage occured involving a level 3 through 5 autonomous vehicle.
 
   The subset of data used consisted of the following:
