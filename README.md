@@ -31,7 +31,7 @@ Minimal scaffolding for the assignment. Fill in dataset choice, cleaning steps, 
 ## Data Cleaning Steps:
   
 1. Cleaned the column names
-2. Filter the reports to version 1
+2. Filtered the reports to version 1
 3. Selected a subset of the data consisting mostly of the columns given in the table above
 4. Derived the `year`, `month`, and `hour` columns from the `incident_date` and `incident_time_24_00` columns
 5. Dropped the `incident_date` and `incident_time_24_00` columns
