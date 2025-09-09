@@ -18,3 +18,6 @@ data/interim/**
 data/raw/**
 !data/raw/.gitkeep
 
+
+# EDA artifacts (not required)
+notebooks/eda_summary.json
