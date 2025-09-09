@@ -1,88 +1,63 @@
 # Homework #3: Collaborative Data Wrangling & EDA
 
-DSE 511 – Fall 2025
+Minimal scaffolding for the assignment. Fill in dataset choice, cleaning steps, and EDA later.
 
-This README documents our dataset choice, cleaning (Partner A, R), EDA (Partner B, Python), collaboration workflow, and reproducibility steps for Homework #3.
+## Dataset
+- **Source:**
+  
+  National Highway Transporation Safety Asssociation's Standing General Order on Crash Reporting for Advanced Driving Systems (ADS) as of August 2025,
+  Obtained September 2025,
+  https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting#data
 
-## Dataset Information
-- Source: National Highway Traffic Safety Administration (NHTSA), Standing General Order (SGO) on Crash Reporting for Advanced Driving Systems (ADS). Link: https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting#data
-- Date accessed: September 2025
-- Description: Self-reported ADS crash events submitted by manufacturers/companies. We use a subset of fields (see table) focusing on time-of-event, vehicle make/model, roadway context, pre-crash movement, and pre-crash speed.
-- Size (cleaned subset in repo): ≈4.5 KB, 68 rows × 10 columns
-- License/terms: Government data made available by NHTSA. Please review the NHTSA site’s terms for reuse and attribution norms when redistributing.
+- **Description:**
+  
+  Self-reported crashes from car companies were physical damage occured involving a level 3 through 5 autonomous vehicle.
 
-The cleaned subset includes these variables:
+  The subset of data used consisted of the following:
 
-| Variable | Description |
-|---|---|
-| `year` | Calendar year of the record/event. |
-| `month` | Month (1–12). |
-| `hour` | Hour of day (0–23) derived from event time. |
-| `reporting_entity` | Organization that submitted the report. |
-| `make` | Vehicle manufacturer. |
-| `model` | Vehicle model. |
-| `model_year` | Model year as defined by manufacturer. |
-| `roadway_type` | Road classification (e.g., highway, street, intersection). |
-| `sv_pre_crash_movement` | Subject vehicle movement just before the crash. |
-| `sv_precrash_speed_mph` | Subject vehicle pre-crash speed (mph). |
+| Variable               | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `year`                 | The calendar year when the record/event was reported.                      |
+| `month`                | The month of the record/event (1–12).                                       |
+| `hour`                 | The hour of the day (0–23) when the event occurred.                        |
+| `reporting_entity`     | The organization or agency that submitted the report.                      |
+| `make`                 | The manufacturer of the vehicle (e.g., Toyota, Ford, Honda).                |
+| `model`                | The specific vehicle model (e.g., Camry, F-150, Civic).                     |
+| `model_year`           | The model year of the vehicle, usually defined by the manufacturer.         |
+| `roadway_type`         | The classification of the road (e.g., highway, street, intersection).   |
+| `sv_pre_crash_movement`| The vehicle’s movement just before the crash (e.g., going straight, turning right).|
+| `sv_precrash_speed_mph`| The speed of the subject vehicle (in miles per hour) before the crash.      |
 
-## Methods
+## Data Cleaning Steps:
+  
+1. Cleaned the column names
+2. Filtered the reports to version 1
+3. Selected a subset of the data consisting mostly of the columns given in the table above
+4. Derived the `year`, `month`, and `hour` columns from the `incident_date` and `incident_time_24_00` columns
+5. Dropped the `incident_date` and `incident_time_24_00` columns
+   
+## How To Use
+- Place raw data in `data/raw/`.
+- Put cleaned/derived data in `data/cleaned/`.
+- Add analysis code in `notebooks/eda.ipynb` or new notebooks.
 
-### Data Cleaning (Partner A)
-- Tools/libraries: R (`tidyverse`, `janitor`, `lubridate`).
-- Steps (see `notebooks/clean_data_script.R`):
-  - Clean column names (`janitor::clean_names`).
-  - Filter to first report version only (`report_version == 1`).
-  - Select relevant columns (entity, make/model, model_year, time fields, roadway_type, movement, speed).
-  - Derive `year`, `month`, `hour` from `incident_date` and `incident_time_24_00` using `lubridate` helpers.
-  - Drop original time columns and reorder for readability.
-  - Write cleaned CSV to `data/cleaned/SGO-ADS-crash-data-clean.csv`.
+## Collaboration
+- Each partner: create a branch, make commits, open a PR.
+- Intentionally create/resolve one small conflict (e.g., edit this intro).
 
-### Exploratory Data Analysis (Partner B)
-- Tools/libraries: Python (`pandas`, `seaborn`, `matplotlib`).
-- Code: `notebooks/eda.py` reads the cleaned CSV and produces:
-  - Summary stats: row/column counts; `sv_precrash_speed_mph` mean, median, std, min, max.
-  - Aggregations: top 10 `make`; counts by `year`.
-  - Correlation: `sv_precrash_speed_mph` vs `model_year` (pairwise, NA dropped).
-  - Figures: `notebooks/figures/speed_hist.png` (histogram), `notebooks/figures/top_makes.png` (bar chart).
-  - Text summary: `notebooks/eda_summary.md`.
+## Exploratory Data Analysis (Partner B)
+
+- Summary statistics computed on the cleaned dataset (see `notebooks/eda_summary.md`):
+  - Row/column counts
+  - Pre-crash speed (`sv_precrash_speed_mph`) mean, median, std, min, max
+  - Top 10 vehicle makes; counts by year
+  - Correlation: `sv_precrash_speed_mph` vs `model_year`
+
+- Visualizations (generated by code, saved under `notebooks/figures/`):
+  - `speed_hist.png` — Histogram of pre-crash speeds
+  - `top_makes.png` — Bar chart of top 10 makes
 
 ## Results
-- The cleaned sample has 68 rows (2025 only in this slice) and 10 columns.
-- Pre-crash speeds are generally low (median 0 mph; mean ≈ 4.9 mph) with a long right tail to ~39 mph.
-- One manufacturer contributes most reports in this subset; counts reflect reporting/exposure, not risk.
-
-Representative figure (generated by code):
-
-![Speed Histogram](notebooks/figures/speed_hist.png)
-
-## Collaboration Notes
-- Partner A (@c-a-s-t-l-e): dataset acquisition; R cleaning script; cleaned CSV; initial README structure.
-- Partner B (@Bryan-Nsoh): Python EDA script; figures; README completion (methods, results, reproducibility).
-- Both: branching, PRs, and merge coordination.
-
-## Reproducibility Instructions
-
-### Option A: Recreate from cleaned data (fast path)
-1) Python environment (optional):
-   - `python3 -m venv .venv && source .venv/bin/activate`
-2) Install Python deps:
-   - `pip install -r requirements.txt`
-3) Run EDA and regenerate figures/summary:
-   - `python notebooks/eda.py`
-4) Outputs:
-   - `notebooks/eda_summary.md`
-   - `notebooks/figures/speed_hist.png`, `notebooks/figures/top_makes.png`
-
-### Option B: Recreate cleaning + EDA
-1) Ensure raw file `data/raw/SGO-ADS-crash-data.csv` is available (large/raw data should not be committed; provide a link if >50 MB).
-2) R packages: `tidyverse`, `janitor`, `lubridate`.
-3) Run the cleaning script from repo root:
-   - `Rscript notebooks/clean_data_script.R`
-4) Then follow Option A steps to run the Python EDA.
-
-## Merge Conflict Reflection (Required)
-We will intentionally create a small conflict by editing this README’s introduction in two separate branches (one per partner). After merging one PR, the second PR will show a conflict on the same lines; we will use GitHub’s “Resolve conflicts” to combine wording. Final notes on what conflicted and how we resolved it will be recorded here after resolution.
 
 - Key findings (see `notebooks/eda_summary.md` for exact numbers):
   - The cleaned sample contains 68 rows (2025 only in this subset).
