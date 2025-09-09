@@ -116,7 +116,3 @@ Dependencies are listed in `requirements.txt` (pandas, seaborn, matplotlib).
 - Partner A (@c-a-s-t-l-e): data sourcing, cleaning script (R), cleaned CSV, initial README sections.
 - Partner B (@Bryan-Nsoh): EDA script (Python), figures, README documentation updates.
 - Both: repository organization, PRs, and conflict resolution.
-
-## Merge Conflict Reflection (to be finalized)
-
-We will intentionally create a minor conflict in the README introduction via two small, separate PRs (one from each partner) and resolve it in GitHub’s UI, documenting the final wording and rationale here.
