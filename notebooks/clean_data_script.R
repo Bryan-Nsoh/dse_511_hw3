@@ -27,10 +27,11 @@ subset_df <- ads_data |>
 # make the time columns
 subset_df <- subset_df %>% 
   mutate(date = my(incident_date),
-         month = month(date), # make Month column
-         year = year(date), # make Year column
-         hour = hour(round_date(as.POSIXct(subset_df$incident_time_24_00, 
+         month = month(date), # make month column
+         year = year(date), # make year column
+         hour = hour(round_date(as.POSIXct(subset_df$incident_time_24_00,       # make hour column
                                            format="%H:%M:%S"), unit = "hour"))) |>
-  select(-c(incident_date, incident_time_24_00, date))
+  select(-c(incident_date, incident_time_24_00, date)) |> # drop these columns
+  relocate(year, month, hour, .before = reporting_entity) # move year, month, and hour to be the first columns in the df
 
 
