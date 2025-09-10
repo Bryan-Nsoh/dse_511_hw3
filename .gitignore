@@ -3,6 +3,10 @@
 Thumbs.db
 .vscode/
 
+# R 
+.RProfile
+/renv/**
+
 # Python
 __pycache__/
 *.py[cod]
